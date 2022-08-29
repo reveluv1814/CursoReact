@@ -1,7 +1,10 @@
 //import { tasks as data } from "./task";
 //import { useState, useEffect } from "react";
+import TaskCard from "./TaskCard";
+import { useContext } from "react";
+import { TaskContext } from "../context/TaskContext";
 
-function TaskList(props) {
+function TaskList() {
   //vamos a guardar el json o los datos en un estado
   /*  const [tasks, setTasks] = useState([]); // la constante tasks toma el valor vacio []
 
@@ -10,18 +13,17 @@ function TaskList(props) {
     setTasks(data);
   }, []); */
 
-  if (props.tasks.length === 0) {
+  const { tasks } = useContext(TaskContext);
+
+  if (tasks.length === 0) {
     return <h1>No hay tarea aun</h1>;
   }
   return (
     <div>
       {
         //vamos a recorrer tasks poniendo un div
-        props.tasks.map((task) => (
-          <div key={task.id}>
-            <h1>{task.title}</h1>
-            <p>{task.description}</p>
-          </div>
+        tasks.map((task) => (
+          <TaskCard key={task.id} task={task} />
         ))
       }
     </div>
