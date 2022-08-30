@@ -16,10 +16,10 @@ function TaskList() {
   const { tasks } = useContext(TaskContext);
 
   if (tasks.length === 0) {
-    return <h1>No hay tarea aun</h1>;
+    return <h1 className="text-center text-white font-bold text-4xl">No hay tareas aun</h1>;
   }
   return (
-    <div>
+    <div className="grid grid-cols-4 gap-2">
       {
         //vamos a recorrer tasks poniendo un div
         tasks.map((task) => (

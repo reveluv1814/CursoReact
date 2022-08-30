@@ -22,3 +22,9 @@ Ejemplo:
 ## usecontext 
 
 hay que ver eso además de separar componentes
+
+## Tailwind en Vite
+
+Vamos y lo instalamos en el siguiente enlace [Tailwind CSS](https://tailwindcss.com/docs/guides/vite)
+
+Y además de la extension en visual code: **Tailwind CSS IntelliSense**
